@@ -1,24 +1,24 @@
-### Vehicle Rental Backend
+# Vehicle Rental Backend
 
 This is the backend application for a vehicle rental service. It exposes a set of REST APIs that enable users to create accounts, browse and book vehicles at different stations, and return vehicles after use.
 
-### Prerequisites
+# Prerequisites
 
 Python 3.6 or later
 PostgreSQL
 
-### Installation
+# Installation
 
 `pip install -r requirements.txt`
 
-# Set the environment variables:
+### Set the environment variables:
 
 ```
 export FLASK_APP=app
 export FLASK_ENV=development
 ```
 
-# Initialize the database:
+### Initialize the database:
 
 ```
 python -m flask db init
@@ -29,7 +29,7 @@ python -m flask db upgrade
 ### Run the application:
 `python -m flask run`
 
-### APIs:
+# APIs:
 
 ## POST /register:
 The POST /register API endpoint allows users to create an account by providing their phone number and a one-time password (OTP - will be used as a password for demo) that has been sent to their phone. When a user makes a POST request to this endpoint with their phone number and OTP in the request body, the server checks if the phone number is already registered. If the phone number is already registered, it returns an error message. If the phone number is not registered, it creates a new user account with the provided phone number and OTP as the password, and returns a success message. This endpoint is used to register a new user for the first time, and is not intended for logging in to an existing account.
